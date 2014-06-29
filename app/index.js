@@ -64,7 +64,7 @@ BespokethemeGenerator.prototype.askFor = function askFor() {
     {
       name: 'themeDescription',
       message: 'What is the description of your theme?',
-      default: 'Some theme for Bespoke.js'
+      default: 'A theme for Bespoke.js'
     }
   ];
 
@@ -100,6 +100,10 @@ BespokethemeGenerator.prototype.app = function app() {
   this.mkdir('lib');
   this.copy('lib/name.js', 'lib/' + this.themeFullName + '.js');
   this.copy('lib/theme.styl', 'lib/theme.styl');
+
+  this.mkdir('demo/src/scripts');
+  this.template('demo/src/index.jade', 'demo/src/index.jade');
+  this.template('demo/src/scripts/main.js', 'demo/src/scripts/main.js');
 };
 
 BespokethemeGenerator.prototype.setupProjectFiles = function setupProjectFiles() {
@@ -139,22 +143,32 @@ BespokethemeGenerator.prototype.setupPackageJson = function setupPackageJson() {
     },
     'devDependencies': {
       'bespoke': '^1.0.0',
+      'bespoke-bullets': '^1.0.0',
       'bespoke-classes': '^1.0.0',
+      'bespoke-keys': '^1.0.0',
+      'bespoke-progress': '^1.0.0',
+      'bespoke-scale': '^1.0.0',
+      'bespoke-state': '^1.0.0',
+      'bespoke-touch': '^1.0.0',
       'brfs': '^1.1.1',
       'browserify': '^4.1.5',
       'function-bind': '^0.1.0',
       'gulp': '^3.5.1',
       'gulp-autoprefixer': '0.0.7',
+      'gulp-browserify': '^0.5.0',
       'gulp-clean': '^0.2.4',
+      'gulp-connect': '^2.0.5',
       'gulp-header': '^1.0.2',
+      'gulp-jade': '^0.6.1',
       'gulp-minify-css': '^0.3.5',
+      'gulp-plumber': '^0.6.3',
       'gulp-rename': '^1.2.0',
       'gulp-stylus': '^1.0.2',
       'gulp-uglify': '^0.3.0',
       'insert-css': '^0.2.0',
       'lodash': '^2.4.1',
-      'vinyl-buffer': '0.0.0',
-      'vinyl-source-stream': '^0.1.1'
+      'opn': '^0.1.2',
+      'through': '^2.3.4'
     },
     'engines': {
       'node': '>=0.10.0'

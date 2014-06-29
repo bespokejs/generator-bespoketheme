@@ -40,6 +40,12 @@ Compile the project:
 $ gulp
 ```
 
+View the demo in a browser with LiveReload.
+
+```bash
+$ gulp demo
+```
+
 Recompile your theme whenever source files change:
 
 ```bash

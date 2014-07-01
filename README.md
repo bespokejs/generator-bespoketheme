@@ -40,16 +40,22 @@ Compile the project:
 $ gulp
 ```
 
-View the demo in a browser with LiveReload.
+Recompile your theme whenever source files change:
+
+```bash
+$ gulp dev
+```
+
+View the demo in a browser with LiveReload:
 
 ```bash
 $ gulp demo
 ```
 
-Recompile your theme whenever source files change:
+Compile and deploy the demo to GitHub pages:
 
 ```bash
-$ gulp dev
+$ gulp deploy
 ```
 
 ### Publish to npm

@@ -94,3 +94,7 @@ gulp.task('connect', ['compile'], function(done) {
 
   opn('http://localhost:8080', done);
 });
+
+gulp.task('deploy', ['compile:demo'], function(done) {
+  ghpages.publish(path.join(__dirname, 'demo/dist'), { logger: gutil.log }, done);
+});

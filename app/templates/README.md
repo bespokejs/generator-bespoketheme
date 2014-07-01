@@ -2,7 +2,7 @@
 
 # <%= themeFullName %>
 
-<%= themeDescription.replace(/Bespoke\.js/g, '[Bespoke.js](http://markdalgleish.com/projects/bespoke.js)') %>
+<%= themeDescription.replace(/Bespoke\.js/g, '[Bespoke.js](http://markdalgleish.com/projects/bespoke.js)') %> &mdash; [View demo](http://<%= githubUser %>.github.io/<%= themeFullName %>)
 
 ## Download
 

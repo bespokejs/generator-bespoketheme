@@ -5,7 +5,7 @@ var gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   stylus = require('gulp-stylus'),
   autoprefixer = require('gulp-autoprefixer'),
-  minifyCss = require('gulp-minify-css'),
+  csso = require('gulp-csso'),
   jade = require('gulp-jade'),
   connect = require('gulp-connect'),
   plumber = require('gulp-plumber'),
@@ -39,7 +39,7 @@ gulp.task('stylus', function() {
     .pipe(isDemo ? plumber() : through())
     .pipe(stylus())
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(minifyCss())
+    .pipe(csso())
     .pipe(gulp.dest('lib/tmp'));
 });
 

@@ -37,7 +37,10 @@ gulp.task('clean', function() {
 gulp.task('stylus', function() {
   return gulp.src('lib/theme.styl')
     .pipe(isDemo ? plumber() : through())
-    .pipe(stylus())
+    .pipe(stylus({
+      'include css': true,
+      'paths': ['./node_modules']
+    }))
     .pipe(autoprefixer('last 2 versions'))
     .pipe(csso())
     .pipe(gulp.dest('lib/tmp'));

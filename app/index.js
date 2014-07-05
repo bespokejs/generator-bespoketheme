@@ -168,6 +168,7 @@ BespokethemeGenerator.prototype.setupPackageJson = function setupPackageJson() {
       'gulp-uglify': '^0.3.0',
       'insert-css': '^0.2.0',
       'lodash': '^2.4.1',
+      'normalizecss': '^3.0.0',
       'opn': '^0.1.2',
       'through': '^2.3.4'
     },

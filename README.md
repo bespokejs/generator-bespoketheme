@@ -4,7 +4,7 @@
 
 A generator for [Yeoman](http://yeoman.io) that scaffolds a [Bespoke.js](http://markdalgleish.com/projects/bespoke.js) theme.
 
-The boilerplate plugin includes a [Gulp](gulpjs.com) build system with [Browserify](http://browserify.org), [Stylus](http://learnboost.github.io/stylus) and [Autoprefixer](https://github.com/ai/autoprefixer) preconfigured.
+The boilerplate plugin includes a [Gulp](gulpjs.com) build system with [Browserify](http://browserify.org), [Stylus](http://learnboost.github.io/stylus), [Normalize.css](http://necolas.github.io/normalize.css) and [Autoprefixer](https://github.com/ai/autoprefixer) preconfigured.
 
 > **Please note:** This generator is in beta and generates themes for a future release of Bespoke.js
 

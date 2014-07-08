@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+  gutil = require('gulp-util'),
   clean = require('gulp-clean'),
   header = require('gulp-header'),
   rename = require('gulp-rename'),
@@ -14,6 +15,7 @@ var gulp = require('gulp'),
   browserify = require('gulp-browserify'),
   through = require('through'),
   path = require('path'),
+  ghpages = require('gh-pages'),
   template = require('lodash').template,
   isDemo = process.argv.indexOf('demo') > 0;
 

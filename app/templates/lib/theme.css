@@ -1,0 +1,28 @@
+@import 'normalizecss/normalize.css';
+.bespoke-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.bespoke-slide {
+  width: 640px;
+  height: 480px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -320px;
+  margin-top: -240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bespoke-inactive {
+  opacity: 0;
+  pointer-events: none;
+}
+.bespoke-bullet-inactive {
+  opacity: 0;
+}

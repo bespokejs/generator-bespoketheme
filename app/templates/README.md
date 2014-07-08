@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/<%= githubUser %>/<%= themeFullName %>.png?branch=master)](https://travis-ci.org/<%= githubUser %>/<%= themeFullName %>) [![Coverage Status](https://coveralls.io/repos/<%= githubUser %>/<%= themeFullName %>/badge.png)](https://coveralls.io/r/<%= githubUser %>/<%= themeFullName %>)
+[![Build Status](https://secure.travis-ci.org/<%= githubUser %>/<%= themeFullName %>.png?branch=master)](https://travis-ci.org/<%= githubUser %>/<%= themeFullName %>)
 
 # <%= themeFullName %>
 

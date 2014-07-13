@@ -31,12 +31,30 @@ gulp.task('watch', function() {
   gulp.watch('demo/src/**/*.js', ['browserify:demo']);
 });
 
-gulp.task('clean', function() {
-  return gulp.src(['dist', 'lib/tmp'], { read: false })
+gulp.task('clean', ['clean:browserify', 'clean:stylus', 'clean:jade']);
+gulp.task('clean:browserify', ['clean:browserify:lib', 'clean:browserify:demo']);
+
+gulp.task('clean:browserify:lib', function() {
+  return gulp.src(['dist'], { read: false })
     .pipe(clean());
 });
 
-gulp.task('stylus', function() {
+gulp.task('clean:browserify:demo', function() {
+  return gulp.src(['demo/dist/build'], { read: false })
+    .pipe(clean());
+});
+
+gulp.task('clean:stylus', function() {
+  return gulp.src(['lib/tmp'], { read: false })
+    .pipe(clean());
+});
+
+gulp.task('clean:jade', function() {
+  return gulp.src(['demo/dist/index.html'], { read: false })
+    .pipe(clean());
+});
+
+gulp.task('stylus', ['clean:stylus'], function() {
   return gulp.src('lib/theme.styl')
     .pipe(isDemo ? plumber() : through())
     .pipe(stylus({
@@ -50,7 +68,7 @@ gulp.task('stylus', function() {
 
 gulp.task('browserify', ['browserify:lib', 'browserify:demo']);
 
-gulp.task('browserify:lib', ['stylus'], function() {
+gulp.task('browserify:lib', ['clean:browserify:lib', 'stylus'], function() {
   return gulp.src('lib/<%= themeFullName %>.js')
     .pipe(isDemo ? plumber() : through())
     .pipe(browserify({ transform: ['brfs'], standalone: 'bespoke.themes.<%= themeNameCamelized %>' }))
@@ -74,7 +92,7 @@ gulp.task('browserify:lib', ['stylus'], function() {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('browserify:demo', function() {
+gulp.task('browserify:demo', ['clean:browserify:demo'], function() {
   return gulp.src('demo/src/scripts/main.js')
     .pipe(isDemo ? plumber() : through())
     .pipe(browserify({ transform: ['brfs'] }))
@@ -83,7 +101,7 @@ gulp.task('browserify:demo', function() {
     .pipe(connect.reload());
 });
 
-gulp.task('jade', function() {
+gulp.task('jade', ['clean:jade'], function() {
   return gulp.src('demo/src/index.jade')
     .pipe(isDemo ? plumber() : through())
     .pipe(jade({ pretty: true }))

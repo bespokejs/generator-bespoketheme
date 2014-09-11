@@ -122,7 +122,7 @@ BespokethemeGenerator.prototype.setupProjectFiles = function setupProjectFiles()
 BespokethemeGenerator.prototype.setupPackageJson = function setupPackageJson() {
   var packageJson = {
     'name': this.themeFullName,
-    'version': '0.0.0',
+    'version': '1.0.0',
     'description': this.themeDescription,
     'homepage': this.githubUrl + '/' + this.themeFullName,
     'bugs': this.githubUrl + '/' + this.themeFullName + '/issues',
@@ -197,7 +197,7 @@ BespokethemeGenerator.prototype.setupPackageJson = function setupPackageJson() {
 BespokethemeGenerator.prototype.setupBowerJson = function setupBowerJson() {
   var bowerJson = {
     'name': this.themeFullName,
-    'version': '0.0.0',
+    'version': '1.0.0',
     "main": "./dist/" + this.themeFullName + ".js",
     "ignore": [
       "**/.*"

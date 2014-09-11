@@ -139,7 +139,7 @@ BespokethemeGenerator.prototype.setupPackageJson = function setupPackageJson() {
       'test': 'gulp'
     },
     'peerDependencies': {
-      'bespoke': '>=1.0.0-beta'
+      'bespoke': '>=1.0.0'
     },
     'devDependencies': {
       'bespoke': '^1.0.0',
@@ -203,7 +203,7 @@ BespokethemeGenerator.prototype.setupBowerJson = function setupBowerJson() {
       "**/.*"
     ],
     'dependencies': {
-      'bespoke.js': '>=1.0.0-beta'
+      'bespoke.js': '>=1.0.0'
     }
   };
   this.write('bower.json', JSON.stringify(bowerJson, null, 2));

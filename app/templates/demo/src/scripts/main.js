@@ -5,7 +5,7 @@ var bespoke = require('bespoke'),
   bullets = require('bespoke-bullets'),
   scale = require('bespoke-scale'),
   progress = require('bespoke-progress'),
-  state = require('bespoke-state');
+  backdrop = require('bespoke-backdrop');
 
 bespoke.from('article', [
   <%= themeNameCamelized %>(),
@@ -14,5 +14,5 @@ bespoke.from('article', [
   bullets('li, .bullet'),
   scale(),
   progress(),
-  state()
+  backdrop()
 ]);

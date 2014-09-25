@@ -143,12 +143,12 @@ BespokethemeGenerator.prototype.setupPackageJson = function setupPackageJson() {
     },
     'devDependencies': {
       'bespoke': '^1.0.0',
+      'bespoke-backdrop': '^1.0.0',
       'bespoke-bullets': '^1.0.0',
       'bespoke-classes': '^1.0.0',
       'bespoke-keys': '^1.0.0',
       'bespoke-progress': '^1.0.0',
       'bespoke-scale': '^1.0.0',
-      'bespoke-state': '^1.0.0',
       'bespoke-touch': '^1.0.0',
       'brfs': '^1.1.1',
       'browserify': '^4.1.5',

@@ -155,7 +155,7 @@ BespokethemeGenerator.prototype.setupPackageJson = function setupPackageJson() {
       'function-bind': '^0.1.0',
       'gh-pages': '^0.2.0',
       'gulp': '^3.5.1',
-      'gulp-autoprefixer': '0.0.7',
+      'gulp-autoprefixer': '^1.0.1',
       'gulp-browserify': '^0.5.0',
       'gulp-clean': '^0.2.4',
       'gulp-connect': '^2.0.5',
